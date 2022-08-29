@@ -18,5 +18,5 @@ class MessageLogMiddleware(Middleware):
         super().__init__(instance_id)
 
     def process_message(self, message: Message) -> Optional[Message]:
-        self.logger.warn("msg: [%s]", message)
+        print(message)
         return message
