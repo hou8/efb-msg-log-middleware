@@ -67,7 +67,7 @@ class MessageLogMiddleware(Middleware):
 
     def process_message(self, message: Message) -> Optional[Message]:
         with open(self._log_path(), 'a') as file:
-            message_json = json.dumps(message, default=msg2dic, ensure_ascii=False).encode('utf8').decode()
+            message_json = json.dumps(message, default=msg2dic, ensure_ascii=False)
             file.write(message_json)
             file.write('\n')
         return message
