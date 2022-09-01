@@ -27,7 +27,6 @@ def msg2dic(msg: Message):
             filename=msg.filename,
             is_system=msg.is_system,
             mime=msg.mime,
-            path=msg.path,
             target_uid=None if msg.target is None else msg.target.uid,
             # Chat
             chat_id=msg.chat.id,
